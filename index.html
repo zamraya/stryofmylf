@@ -10,29 +10,194 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-
     <header>
         <div class="nav">
             <div class="logo">SOML</div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#" class="login-btn">Log in</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="login.html" class="login-btn">Log in</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    
+<header>
+    <div class="nav">
+        <div class="logo">SOML</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="login.html" class="login-btn">Log in</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-    <section class="hero">
-        <div class="overlay"></div>
-        <div class="content">
-            <h1><i>Story Of My Life</i></h1>
-            <h5>A journey of growth, dreams, and determination.</h5>
-            <a href="explore.html" class="btn">Explore Here</a>
+<section id="home" class="hero">
+    <div class="overlay"></div>
+    <div class="content">
+        <h1><i>Story Of My Life</i></h1>
+        <h5>A journey of growth, dreams, and determination.</h5>
+        <a href="#explore" class="btn">Explore Here</a>
+    </div>
+</section>
+
+<section id="about" class="section about">
+    <h2>About Me</h2>
+    <p>...</p>
+</section>
+
+<section id="explore" class="section explore">
+    <h1>Explore My Journey</h1>
+    <h2 class="latest">Latest</h2>
+    <div class="grid">
+         <div class="card">
+            <img src="/images/January" alt="January">
+            <div class="card-content">
+                <div class="category">Content 1</div>
+                <div class="title">
+                    <a href="#">January</a>
+                </div>
+            </div>
         </div>
-    </section>
+        
+        <div class="card">
+            <img src="/images/February" alt="February">
+            <div class="card-content">
+                <div class="category">Content 2</div>
+                <div class="title">
+                    <a href="#">February</a>
+                </div>
+            </div>
+        </div>
+        
+           <div class="card">
+            <img src="/background/scene2" alt="March">
+            <div class="card-content">
+                <div class="category">Content 3</div>
+                <div class="title">
+                    <a href="#">March</a>
+                </div>
+            </div>
+        </div>
+        
+           <div class="card">
+            <img src="/images/April" alt="April">
+            <div class="card-content">
+                <div class="category">Content 4</div>
+                <div class="title">
+                    <a href="#">April</a>
+                </div>
+            </div>
+        </div>
+        
+           <div class="card">
+            <img src="/background/scene2" alt="May">
+            <div class="card-content">
+                <div class="category">Content 5</div>
+                <div class="title">
+                    <a href="#">May</a>
+                </div>
+            </div>
+        </div>
+        
+           <div class="card">
+            <img src="/images/June" alt="June">
+            <div class="card-content">
+                <div class="category">Content 6</div>
+                <div class="title">
+                    <a href="#">June</a>
+                </div>
+            </div>
+        </div>
+        
+           <div class="card">
+            <img src="/background/scene2" alt="July">
+            <div class="card-content">
+                <div class="category">Content 7</div>
+                <div class="title">
+                    <a href="#">July</a>
+                </div>
+            </div>
+        </div>
+        
+           <div class="card">
+            <img src="/background/scene2" alt="August">
+            <div class="card-content">
+                <div class="category">Content 8</div>
+                <div class="title">
+                    <a href="#">August</a>
+                </div>
+            </div>
+        </div>
+        
+           <div class="card">
+            <img src="/background/scene2" alt="September">
+            <div class="card-content">
+                <div class="category">Content 9</div>
+                <div class="title">
+                    <a href="#">September</a>
+                </div>
+            </div>
+        </div>
+        
+           <div class="card">
+            <img src="/images/October" alt="October">
+            <div class="card-content">
+                <div class="category">Content 10</div>
+                <div class="title">
+                    <a href="#">October</a>
+                </div>
+            </div>
+        </div>
+        
+           <div class="card">
+            <img src="/images/November" alt="November">
+            <div class="card-content">
+                <div class="category">Content 11</div>
+                <div class="title">
+                    <a href="#">November</a>
+                </div>
+            </div>
+        </div>
+        
+           <div class="card">
+            <img src="/images/December" alt="December">
+            <div class="card-content">
+                <div class="category">Content 12</div>
+                <div class="title">
+                    <a href="#l">December</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact" class="section contact">
+    <div class="contact-form">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+        
+        <p class="confirmation-message" id="confirmationMessage">Thank you! Your message has been sent.</p>
+    </div>
+</section>
 
     <footer>
         <div class="footer-container">

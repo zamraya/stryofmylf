@@ -3,6 +3,7 @@ html {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -33,7 +34,6 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  color: black;
 }
 
 nav ul li {
@@ -55,7 +55,7 @@ nav ul li a {
 
 .hero {
   position: relative;
-  height: 30vh;
+  height: 50vh;
   background: url('/images/background') no-repeat center center/cover;
   display: flex;
   justify-content: center;
@@ -78,13 +78,6 @@ nav ul li a {
   z-index: 1;
 }
 
-.content h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 40px;
-  font-style: italic;
-  margin: 0;
-}
-
 .content h1 {
   font-size: 50px;
   font-weight: bold;
@@ -102,55 +95,201 @@ nav ul li a {
   margin-top: 20px;
 }
 
-footer {
-    background: lightgray;
-    color: white;
-    padding: 20px 0;
+.section {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.about, .contact, .explore {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about {
+  background-color: #f7f7f7;
+}
+
+.contact {
+  background-color: #dcdcdc;
+}
+
+.explore {
+    background-color: #cccccc;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.latest {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 50px 0 30px;
     text-align: center;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card img {
+    width: 80%; 
+    max-height: 150px;
+    object-fit: cover;
+    padding: 15px;
+    border: 10px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content .category {
+    color: red;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-content .title a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.card-conte
+nt .title a:hover {
+    color: blue;
+}
+
+footer {
+  background: lightgray;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
 .footer-container {
-    max-width: 900px;
-    margin: auto;
+  max-width: 900px;
+  margin: auto;
 }
 
 .social-icons {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
-  .social-icons a {
-    font-size: 24px;
-    color: black;
-    text-decoration: none;
-    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border: 2px solid #ddd;
-    border-radius: 50%;
-  }
+.social-icons a {
+  font-size: 24px;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+}
 
-  .social-icons a:hover {
-    color: #fff;
-    background-color: #555;
-    transform: scale(1.1);
-  }
+.social-icons a:hover {
+  color: #fff;
+  background-color: #555;
+  transform: scale(1.1);
+}
 
-  .social-icons a[aria-label="Facebook"]:hover {
-    background-color: #3b5998;
-  }
+.social-icons a[aria-label="Facebook"]:hover {
+  background-color: #3b5998;
+}
 
-  .social-icons a[aria-label="Twitter"]:hover {
-    background-color: #1da1f2;
-  }
+.social-icons a[aria-label="Twitter"]:hover {
+  background-color: #1da1f2;
+}
 
-  .social-icons a[aria-label="Instagram"]:hover {
-    background-color: #e1306c;
-  }
+.social-icons a[aria-label="Instagram"]:hover {
+  background-color: #e1306c;
+}
 
 .copyright {
-    font-size: 12px;
-    margin-top: 10px;
+  font-size: 12px;
+  margin-top: 10px;
 }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 400px; 
+        }
+        .contact-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        .contact-form input, .contact-form textarea, .contact-form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background: white;
+        }
+        
+     .contact-form button {
+            display: block;
+            width: auto; 
+            margin: 0 auto 20px;
+            padding: 10px 15px;
+            border: none;
+            background: white;
+            border-radius: 5px;
+            color: black;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: white;
+        }
+        
+        .confirmation-message {
+            display: none;
+            margin-top: 10px;
+            color: black;
+            text-align: center;
+        }
