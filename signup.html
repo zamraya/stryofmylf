@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in</title>
+    <title>Sign up</title>
     <style>
         body {
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -28,26 +28,47 @@
         }
         .left-section {
             flex: 1;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: #fff;
+            background: linear-gradient(135deg, #F8F8FF, #100C07);
+            color: black;
             padding: 30px;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
             min-width: 300px;
+        }
+        .left-section h2 {
+            margin: 0 0 20px;
             text-align: center;
+            font-size: 1.8rem;
         }
-        .left-section h1 {
-            font-size: 2rem;
-            margin-bottom: 20px;
+        .left-section input[type="text"], 
+        .left-section input[type="password"], 
+        .left-section input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: none;
+            background: white;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .left-section input[type="submit"] {
             color: black;
+            cursor: pointer;
         }
-        .left-section p {
-            font-size: 1rem;
-            line-height: 1.5;
-            color: black;
+        .left-section input[type="submit"]:hover {
+            background: #ddd;
         }
-        .back-button {
+        .login-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .login-link a {
+            color: #3498db;
+            text-decoration: none;
+        }
+          .back-button {
             padding: 10px 15px;
             border: none;
             background: white;
@@ -63,63 +84,43 @@
             background: #ddd;
         }
         
-        .login-box {
+        .signup-box {
             flex: 1;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: black;
             padding: 30px;
-            background: linear-gradient(135deg, #F8F8FF, #100C07);
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            text-align: center;
             min-width: 300px;
         }
-        .login-box h2 {
-            margin: 0 0 20px;
-            text-align: center;
-            font-size: 1.8rem;
-        }
-        .login-box input[type="text"], 
-        .login-box input[type="password"], 
-        .login-box input[type="submit"] {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: none;
-            background: white;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-        .login-box input[type="submit"] {
+        .signup-box h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
             color: black;
-            cursor: pointer;
         }
-        .login-box input[type="submit"]:hover {
-            background: #ddd;
-        }
-        .signup-link {
-            text-align: center;
-            margin-top: 10px;
-        }
-        .signup-link a {
-            color: #3498db;
-            text-decoration: none;
+        .signup-box p {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: black;
         }
 
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
             }
-            .left-section, .login-box {
+            .left-section, .signup-box {
                 padding: 20px;
             }
-            .left-section h1 {
+            .left-section h2 {
+                font-size: 1.5rem;
+            }
+            .signup-box h1 {
                 font-size: 1.8rem;
             }
-            .left-section p {
+            .signup-box p {
                 font-size: 0.9rem;
-            }
-            .login-box h2 {
-                font-size: 1.5rem;
             }
         }
     </style>
@@ -127,32 +128,34 @@
 <body>
     <div class="container">
         <div class="left-section">
-            <h1>Welcome Back!</h1>
-            <p>Access your account and stay updated.<br><br> Don't have an account yet?<br> No worries, you can sign up and join us!</p>
-            <button type="button" class="back-button" onclick="goBack()">Back</button>
-        </div>
-        <div class="login-box">
-            <h2>Log in</h2>
-            <form id="loginForm">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
                 <input type="text" id="username" placeholder="Username" required>
                 <input type="password" id="password" placeholder="Password" required>
-                <input type="submit" value="Log in">
+                <input type="submit" value="Sign up">
             </form>
-            <div class="signup-link">
-                Don't have an account? <a href="signup.html">Sign Up</a>
+            <div class="login-link">
+                Already have an account? <a href="login.html">Log in</a>
             </div>
+        </div>
+        <div class="signup-box">
+            <h1>Welcome to Sign Up!</h1>
+            <p>Join us by creating an account.<br>
+            Access all the features and stay connected. <br><br>Already have an account? Log in now!</p>
+            <button type="button" class="back-button" onclick="goBack()">Back</button>
         </div>
     </div>
 
     <script>
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            window.location.href = 'index.html';
+            window.location.href = 'login.html';
         });
 
         function goBack() {
-            window.location.href = 'index.html';
+            window.location.href = 'login.html';
         }
     </script>
 </body>
+</html>
 </html>
