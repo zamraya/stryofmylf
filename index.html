@@ -55,129 +55,82 @@
 <section id="explore" class="section explore">
     <h1>Explore My Journey</h1>
     <h2 class="latest">Latest</h2>
-    <div class="grid">
-         <div class="card">
-            <img src="/images/January" alt="January">
-            <div class="card-content">
-                <div class="category">Content 1</div>
-                <div class="title">
-                    <a href="#">January</a>
-                </div>
-            </div>
+    <div class="grid page-1">
+        <!-- Page 1 Polaroids -->
+        <div class="polaroid">
+            <img src="/images/1January" alt="January">
+            <div class="caption">This is January.</div>
         </div>
-        
-        <div class="card">
-            <img src="/images/February" alt="February">
-            <div class="card-content">
-                <div class="category">Content 2</div>
-                <div class="title">
-                    <a href="#">February</a>
-                </div>
-            </div>
+        <div class="polaroid">
+            <img src="/images/2February" alt="February">
+            <div class="caption">This is February.</div>
         </div>
-        
-           <div class="card">
-            <img src="/background/scene2" alt="March">
-            <div class="card-content">
-                <div class="category">Content 3</div>
-                <div class="title">
-                    <a href="#">March</a>
-                </div>
-            </div>
+        <div class="polaroid">
+            <img src="/images/3March" alt="March">
+            <div class="caption">This is March.</div>
         </div>
-        
-           <div class="card">
-            <img src="/images/April" alt="April">
-            <div class="card-content">
-                <div class="category">Content 4</div>
-                <div class="title">
-                    <a href="#">April</a>
-                </div>
-            </div>
+        <div class="polaroid">
+            <img src="/images/4April" alt="April">
+            <div class="caption">This is April.</div>
         </div>
-        
-           <div class="card">
-            <img src="/background/scene2" alt="May">
-            <div class="card-content">
-                <div class="category">Content 5</div>
-                <div class="title">
-                    <a href="#">May</a>
-                </div>
-            </div>
+        <div class="polaroid">
+            <img src="/images/5May" alt="May">
+            <div class="caption">This is May.</div>
         </div>
-        
-           <div class="card">
-            <img src="/images/June" alt="June">
-            <div class="card-content">
-                <div class="category">Content 6</div>
-                <div class="title">
-                    <a href="#">June</a>
-                </div>
-            </div>
+        <div class="polaroid">
+            <img src="/images/6June" alt="June">
+            <div class="caption">This is June.</div>
         </div>
-        
-           <div class="card">
-            <img src="/background/scene2" alt="July">
-            <div class="card-content">
-                <div class="category">Content 7</div>
-                <div class="title">
-                    <a href="#">July</a>
-                </div>
-            </div>
+    </div>
+
+    <div class="grid page-2">
+        <!-- Page 2 Polaroids -->
+        <div class="polaroid">
+            <img src="/images/7July" alt="July">
+            <div class="caption">This is July.</div>
         </div>
-        
-           <div class="card">
-            <img src="/background/scene2" alt="August">
-            <div class="card-content">
-                <div class="category">Content 8</div>
-                <div class="title">
-                    <a href="#">August</a>
-                </div>
-            </div>
+        <div class="polaroid">
+            <img src="/images/8August" alt="August">
+            <div class="caption">This is August.</div>
         </div>
-        
-           <div class="card">
-            <img src="/background/scene2" alt="September">
-            <div class="card-content">
-                <div class="category">Content 9</div>
-                <div class="title">
-                    <a href="#">September</a>
-                </div>
-            </div>
+        <div class="polaroid">
+            <img src="/images/9September" alt="September">
+            <div class="caption">This is September.</div>
         </div>
-        
-           <div class="card">
-            <img src="/images/October" alt="October">
-            <div class="card-content">
-                <div class="category">Content 10</div>
-                <div class="title">
-                    <a href="#">October</a>
-                </div>
-            </div>
+        <div class="polaroid">
+            <img src="/images/10October" alt="October">
+            <div class="caption">This is October.</div>
         </div>
-        
-           <div class="card">
-            <img src="/images/November" alt="November">
-            <div class="card-content">
-                <div class="category">Content 11</div>
-                <div class="title">
-                    <a href="#">November</a>
-                </div>
-            </div>
+        <div class="polaroid">
+            <img src="/images/11November" alt="November">
+            <div class="caption">This is November.</div>
         </div>
-        
-           <div class="card">
-            <img src="/images/December" alt="December">
-            <div class="card-content">
-                <div class="category">Content 12</div>
-                <div class="title">
-                    <a href="#l">December</a>
-                </div>
-            </div>
+        <div class="polaroid">
+            <img src="/images/12December" alt="December">
+            <div class="caption">This is December.</div>
         </div>
+    </div>
+
+    <div class="pagination">
+        <a href="#" class="page-link" data-page="1">Page 1</a>
+        <a href="#" class="page-link" data-page="2">Page 2</a>
     </div>
 </section>
 
+<script>
+    const pageLinks = document.querySelectorAll('.page-link');
+    const grids = document.querySelectorAll('.grid');
+
+    pageLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const page = link.getAttribute('data-page');
+
+            grids.forEach(grid => grid.style.display = 'none');
+            document.querySelector(`.grid.page-${page}`).style.display = 'grid';
+        });
+    });
+</script>
 
 <section id="contact" class="section contact">
     <div class="contact-form">

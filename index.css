@@ -55,7 +55,7 @@ nav ul li a {
 
 .hero {
   position: relative;
-  height: 50vh;
+  height: 35vh;
   background: url('/images/background') no-repeat center center/cover;
   display: flex;
   justify-content: center;
@@ -101,7 +101,7 @@ nav ul li a {
 }
 
 .about, .contact, .explore {
-  height: 50vh;
+  height: 35vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -293,3 +293,87 @@ footer {
             color: black;
             text-align: center;
         }
+
+.grid {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.grid.page-1 {
+    display: grid;
+}
+
+.polaroid {
+    position: relative;
+    width: 250px;
+    background: white;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 5px solid white;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.polaroid img {
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    max-height: 200px;
+}
+
+.polaroid:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 14px;
+    display: none;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.polaroid:hover .caption {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: lightgray;
+}
