@@ -332,9 +332,11 @@ form button:hover {
   text-align: center;
 }
 
+/* General grid styling */
 .grid {
-    display: none;
-    grid-template-columns: repeat(3, 1fr);
+    display: none; /* Default hidden */
+    grid-template-columns: repeat(2, 1fr); /* 3 columns for larger screens */
+    grid-template-rows: repeat(3, auto);
     gap: 20px;
     padding: 0 20px;
 }
@@ -345,7 +347,8 @@ form button:hover {
 
 .polaroid {
     position: relative;
-    width: 250px;
+    width: 100%; /* Allow it to adapt to the grid container */
+    max-width: 250px; /* Cap max width for larger screens */
     background: white;
     padding: 10px;
     text-align: center;
@@ -353,13 +356,14 @@ form button:hover {
     border: 5px solid white;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto; /* Center the polaroid in its grid cell */
 }
 
 .polaroid img {
     width: 100%;
     border-radius: 5px;
     object-fit: cover;
-    max-height: 200px;
+    height: 200px; /* Ensure uniform height */
 }
 
 .polaroid:hover {
@@ -392,6 +396,19 @@ form button:hover {
     }
     to {
         opacity: 1;
+    }
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr; /* 1 column for mobile devices */
     }
 }
 
