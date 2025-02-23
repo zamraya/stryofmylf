@@ -288,7 +288,7 @@ header {
   .explore {
     background-color: #cccccc;
     font-family: 'Courier New', monospace;
-    height: 130vh;
+    height: 150vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
