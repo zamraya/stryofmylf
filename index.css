@@ -218,8 +218,8 @@ header {
   text-align: center;
 }
 
-.about, .contact, .explore {
-  height: 120vh;
+.about, .contact {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -288,6 +288,11 @@ header {
   .explore {
     background-color: #cccccc;
     font-family: 'Courier New', monospace;
+    height: 130vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   }
   
         .collage {
