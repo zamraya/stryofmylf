@@ -16,7 +16,7 @@ header {
   z-index: 1000;
 }
 
-     .nav {
+.nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -186,6 +186,9 @@ header {
   background: rgba(0, 0, 0, 0.5);
 }
 
+
+
+
 /*about*/
 .content {
   position: relative;
@@ -276,6 +279,11 @@ header {
     max-width: 600px;
 }
 
+
+
+
+
+
 /*explore*/
   .explore {
     background-color: #cccccc;
@@ -351,7 +359,10 @@ header {
   font-weight: bold;
   margin-top: 5px;
 }
-        
+   
+   
+   
+   
 /*contact*/
 .contact {
   background-color: #dcdcdc;
@@ -425,76 +436,4 @@ form button:hover {
   margin-top: 10px;
   color: black;
   text-align: center;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@media (max-width: 1024px) {
-    .grid {
-        grid-template-columns: repeat(3, 1fr); 
-    }
-}
-
-@media (max-width: 600px) {
-    .grid {
-        grid-template-columns: 1fr; 
-    }
-}
-
-@media (min-width: 1440px) {
-    body {
-        font-size: 18px; 
-    }
-
-    .grid {
-        grid-template-columns: repeat(4, 1fr); 
-    }
-
-    .hero h1 {
-        font-size: 48px; 
-    }
-
-    .about-content-container {
-        flex-direction: row;
-    }
-}
-
-
-@media (min-width: 1920px) {
-    .container {
-        max-width: 1600px;
-    }
-
-    .hero h1 {
-        font-size: 64px;
-    }
-
-    .grid {
-        grid-template-columns: repeat(5, 1fr); 
-    }
-}
-
-@media (max-width: 768px) {
-  .nav ul {
-    flex-direction: column;
-  }
-
-  .container {
-    flex-direction: column;
-  }
-
-  .about-content-container {
-    flex-direction: column;
-  }
-
-  .polaroid {
-    width: 100%;
-  }
 }
