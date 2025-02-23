@@ -12,23 +12,61 @@
 <body>
 <header>
 <div class="nav">
-  <div class="logo">SOML</div>
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li class="dropdown">
-        <a href="#explore">Explore <span class="arrow">▼</span></a>
-        <ul class="dropdown-menu">
-          <li><a href="#grid page-1">Page 1</a></li>
-          <li><a href="#grid page-2">Page 2</a></li>
-        </ul>
-      </li>
-      <li><a href="#contact">Contact Us</a></li>
-      <li><a href="login.html" class="login-btn">Log in</a></li>
-    </ul>
-  </nav>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/jamriah.manza" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-facebook-square"></i>
+        </a>
+        <a href="https://www.instagram.com/_strwbrryjamx?igsh=cWNsd2VreDBmcW85" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="mailto:jamriahmanza12@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+    </div>
+    
+    <div class="left-section">
+        <div class="logo"><strong>JRM</strong> Blog</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" id="categories-btn">Categories <span class="arrow">▼</span></a>
+                    <ul class="dropdown-menu" id="dropdown-menu">
+                        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+                        <li><a href="#explore"><i class="fas fa-compass"></i> Explore</a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope-open-text"></i> Contact Us</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="right-section">
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>&#128269;</button> <!-- Search Icon -->
+        </div>
+        <a href="login.html" class="login-btn">Log in</a>
+    </div>
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    let categoriesBtn = document.getElementById("categories-btn");
+    let dropdownMenu = document.getElementById("dropdown-menu");
+
+    categoriesBtn.addEventListener("click", function(event) {
+      event.preventDefault();
+      dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+    });
+
+    document.addEventListener("click", function(event) {
+      if (!categoriesBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.style.display = "none";
+      }
+    });
+  });
+</script>
 </header>
 
 <section id="home" class="hero">
