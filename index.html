@@ -91,82 +91,88 @@
 </section>
 
 <section id="explore" class="explore">
-    <h1>Explore My Journey</h1>
-    <h2 class="latest">Latest</h2>
-    <div class="grid page-1">
-        <div class="polaroid">
-            <img src="/images/1January" alt="January">
-            <div class="caption">January.</div>
-        </div>
-        <div class="polaroid">
-            <img src="/images/2February" alt="February">
-            <div class="caption">February.</div>
-        </div>
-        <div class="polaroid">
-            <img src="/images/3March" alt="March">
-            <div class="caption">March.</div>
-        </div>
-        <div class="polaroid">
-            <img src="/images/4April" alt="April">
-            <div class="caption">April.</div>
-        </div>
-        <div class="polaroid">
-            <img src="/images/5May" alt="May">
-            <div class="caption">May.</div>
-        </div>
-        <div class="polaroid">
-            <img src="/images/6June" alt="June">
-            <div class="caption">June.</div>
-        </div>
+    <div class="collage">
+      <div class="polaroid" onclick="flipCard(this)">
+        <img src="/images/1January" alt="January">
+        <div class="caption">January</div>
+        <div class="back-caption">New Year Celebration</div>
+      </div>
+
+      <div class="polaroid" onclick="flipCard(this)">
+        <img src="/images/2February" alt="February">
+        <div class="caption">February</div>
+        <div class="back-caption">Valentine's Day</div>
+      </div>
+
+      <div class="polaroid" onclick="flipCard(this)">
+        <img src="/images/3March" alt="March">
+        <div class="caption">March</div>
+        <div class="back-caption">Spring Begins</div>
+      </div>
+
+          <div class="polaroid" onclick="flipCard(this)">
+      <img src="/images/4April" alt="April">
+      <div class="caption">April</div>
+      <div class="back-caption">.</div>
     </div>
 
-    <div class="grid page-2">
-        <div class="polaroid">
-            <img src="/images/7July" alt="July">
-            <div class="caption">July.</div>
-        </div>
-        <div class="polaroid">
-            <img src="/images/8August" alt="August">
-            <div class="caption">August.</div>
-        </div>
-        <div class="polaroid">
-            <img src="/images/9September" alt="September">
-            <div class="caption">September.</div>
-        </div>
-        <div class="polaroid">
-            <img src="/images/10October" alt="October">
-            <div class="caption">October.</div>
-        </div>
-        <div class="polaroid">
-            <img src="/images/11November" alt="November">
-            <div class="caption">November.</div>
-        </div>
-        <div class="polaroid">
-            <img src="/images/12December" alt="December">
-            <div class="caption">December.</div>
-        </div>
+    <div class="polaroid" onclick="flipCard(this)">
+      <img src="/images/5May" alt="May">
+      <div class="caption">May</div>
+      <div class="back-caption">.</div>
     </div>
 
-    <div class="pagination">
-        <a href="#" class="page-link" data-page="1">Page 1</a>
-        <a href="#" class="page-link" data-page="2">Page 2</a>
+    <div class="polaroid" onclick="flipCard(this)">
+      <img src="/images/6June" alt="June">
+      <div class="caption">June</div>
+      <div class="back-caption">.</div>
     </div>
+    
+        <div class="polaroid" onclick="flipCard(this)">
+      <img src="/images/7July" alt="July">
+      <div class="caption">July</div>
+      <div class="back-caption">.</div>
+    </div>
+
+    <div class="polaroid" onclick="flipCard(this)">
+      <img src="/images/8August" alt="August">
+      <div class="caption">August</div>
+      <div class="back-caption">.</div>
+    </div>
+
+    <div class="polaroid" onclick="flipCard(this)">
+      <img src="/images/9September" alt="September">
+      <div class="caption">September</div>
+      <div class="back-caption">.</div>
+    </div>
+    
+        <div class="polaroid" onclick="flipCard(this)">
+      <img src="/images/10October" alt="October">
+      <div class="caption">October</div>
+      <div class="back-caption">.</div>
+    </div>
+
+    <div class="polaroid" onclick="flipCard(this)">
+      <img src="/images/11November" alt="November">
+      <div class="caption">November</div>
+      <div class="back-caption">.</div>
+    </div>
+
+    <div class="polaroid" onclick="flipCard(this)">
+      <img src="/images/12December" alt="December">
+      <div class="caption">December</div>
+      <div class="back-caption">.</div>
+    </div>
+    </div>
+    
+<h1 class="bottom-title">Two Thousand Twenty-Four</h1>
+
+    <script>
+      function flipCard(card) {
+        card.classList.toggle("flipped");
+      }
+    </script>
 </section>
-
-<script>
-    const pageLinks = document.querySelectorAll('.page-link');
-    const grids = document.querySelectorAll('.grid');
-
-    pageLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const page = link.getAttribute('data-page');
-
-            grids.forEach(grid => grid.style.display = 'none');
-            document.querySelector(`.grid.page-${page}`).style.display = 'grid';
-        });
-    });
-</script>
 
 <section id="contact" class="section contact">
   <h1>Contact Us</h1>
