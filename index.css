@@ -8,7 +8,7 @@ html {
 }
 
 header {
-  background: lightgray;
+  background: linear-gradient(120deg, #FAE8ED, #FDD5DF, #FFE6EE, #FFA2B9);
   padding: 15px 0;
   width: 100%;
   position: fixed;
@@ -243,7 +243,7 @@ strong {
 }
 
 .about {
-  background-color: #f7f7f7;
+  background-color: white;
 }
 
 .about-content-container {
@@ -301,7 +301,7 @@ strong {
 
 /*explore*/
   .explore {
-    background-color: #cccccc;
+    background: linear-gradient(120deg, #FAE8ED, #FDD5DF, #FFE6EE, #FFA2B9);
     font-family: 'Courier New', monospace;
     height: 150vh;
   display: flex;
@@ -393,11 +393,11 @@ strong {
    
 /*contact*/
 .contact {
-  background-color: #dcdcdc;
+  background-color: white;
 }
 
 footer {
-  background: lightgray;
+  background: linear-gradient(120deg, #FAE8ED, #FDD5DF, #FFE6EE, #FFA2B9);
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -423,7 +423,7 @@ footer {
 }
 
 .form-box {
-  background: linear-gradient(135deg, #F8F8FF, #100C07);
+  background: linear-gradient(120deg, #FAE8ED, #FDD5DF, #FFE6EE, #FFA2B9);
   padding: 50px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -433,7 +433,7 @@ footer {
 
 .form-box h2 {
   margin-bottom: 20px;
-  color: #fff;
+  color: black;
 }
 
 form input, form textarea, form button {
@@ -446,7 +446,7 @@ form input, form textarea, form button {
 }
 
 form input, form textarea {
-  background: #ecf0f1;
+  background: white;
 }
 
 form button {
