@@ -207,6 +207,10 @@ strong {
   z-index: 1;
 }
 
+.content span{
+  color: #e85470;
+}
+
 .content h1 {
   font-size: 50px;
   font-weight: bold;
@@ -278,7 +282,10 @@ strong {
 .about-text {
     flex: 1;
 }
-
+  .about-text span{
+  color: #e85470;
+  }
+  
 .about-text h1 {
     font-size: 36px;
     font-weight: bold;
@@ -388,7 +395,9 @@ strong {
   margin-top: 5px;
 }
    
-   
+   .bottom-title span{
+     color: #e85470;
+   }
    
    
 /*contact*/
@@ -495,3 +504,23 @@ form button:hover {
     background: black;
   }
 
+
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+  .container {
+    width: 90%;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+}
