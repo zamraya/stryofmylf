@@ -340,12 +340,18 @@ strong {
             border-radius: 5px;
             object-fit: cover;
         }
-
-        .caption {
-            margin-top: 10px;
-            font-size: 16px;
-            font-family: 'Courier New', monospace;
-        }
+        
+       .caption {
+         margin-top: 10px;
+  font-size: 16px;
+  font-family: 'Courier New', monospace;
+       }
+       
+        #borderimg1 {
+  border: 5px solid transparent;
+  padding: 10px;
+  border-image: url(/images/border) 30 round;
+}
 
         .polaroid .back-caption {
             position: absolute;
