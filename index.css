@@ -452,6 +452,7 @@ form input, form textarea, form button {
   border: none;
   border-radius: 5px;
   font-size: 1rem;
+  overflow: scroll;
 }
 
 form input, form textarea {
