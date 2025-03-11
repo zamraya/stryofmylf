@@ -262,6 +262,7 @@ strong {
     position: relative;
     width: 250px;
     height: auto;
+    float: left;
 }
 
 .about-image img {
@@ -300,9 +301,8 @@ strong {
     line-height: 1.5;
     margin-bottom: 15px;
     max-width: 600px;
+    overflow: scroll;
 }
-
-
 
 
 
