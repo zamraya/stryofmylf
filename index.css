@@ -368,7 +368,7 @@ strong {
     bottom: 10px;
     right: 10px;
     font-size: 20px;
-    color: #444; /* Adjust color */
+    color: #444; 
 }
 .reactions i {
     margin: 5px;
@@ -424,6 +424,8 @@ strong {
    .bottom-title span{
      color: #e85470;
    }
+   
+
    
    
 /*contact*/
