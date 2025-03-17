@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 <header>
@@ -28,7 +29,7 @@
   <div class="left-section">
     <div class="logo">
         <img src="/images/logo" alt="My Website Logo" class="logo-img">
-        <strong>Blog</strong>
+        <strong>LifeLog</strong>
     </div>
         <nav>
             <ul>
@@ -48,7 +49,7 @@
     <div class="right-section">
         <div class="search-bar">
             <input type="text" placeholder="Search...">
-            <button>&#128269;</button> <!-- Search Icon -->
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
         </div>
         <a href="login.html" class="login-btn">Log in</a>
     </div>
@@ -76,7 +77,7 @@
 <section id="home" class="hero">
     <div class="overlay"></div>
     <div class="content">
-        <h1><i>Story Of <span>My Life</span></i></h1>
+        <h1><i>Moments &<span> Memories</span></i></h1>
         <h5>2024 Journey</h5>
         <a href="#explore" class="btn">Explore Here</a>
     </div>
@@ -89,24 +90,34 @@
         </div>
         <div class="about-text">
             <h1><span>ABOUT</span> ME</h1>
+            <h2>Living, Learning, Growing</h2>
             <p>I am Jam Riah B. Manza, 20 years old, a 3rd-year Computer Engineering student. Outside of my studies, I enjoy crocheting, which helps me develop patience, creativity, and attention to detail. As an only child, I have grown to be independent and adaptable, traits that have shaped both my personal and academic life. My curiosity and love for learning push me to explore new innovations and seek opportunities for growth, both personally and professionally.</p>
         </div>
     </div>
 </section>
 
 <section id="explore" class="explore">
-    <div class="collage">
-      <div class="polaroid" onclick="flipCard(this)">
-        <img src="/images/1January" alt="January">
-        <div class="caption">January</div>
-        <div class="back-caption">
-        <p id="borderimg1">Sinulog Celebration.</p>
-        </div>
-      </div>
+  <div class="collage">
+  <div class="polaroid" onclick="flipCard(this)">
+    <img src="/images/1January" alt="January">
+    <div class="caption">January</div>
+    <div class="reactions">
+      <i class="fa-solid fa-heart"></i>
+      <i class="fa-solid fa-thumbs-up"></i>
+      <i class="fa-solid fa-face-laugh"></i>
+      <i class="fa-solid fa-question"></i>
+    </div>
+    <div class="back-caption">
+      <p id="borderimg1">Sinulog Celebration.</p>
+    </div>
+  </div>
 
       <div class="polaroid" onclick="flipCard(this)">
         <img src="/images/2February" alt="February">
         <div class="caption">February</div>
+        <div class="reactions">
+    <i class="fa-solid fa-heart"></i>
+</div>
         <div class="back-caption">
         <p id="borderimg1">Valentine's Day.</p>
         </div>

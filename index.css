@@ -141,6 +141,7 @@ strong {
     border-radius: 20px;
     padding: 5px 10px;
     width: 200px;
+    background: transparent;
 }
 
 .search-bar input {
@@ -149,6 +150,7 @@ strong {
     width: 100%;
     font-size: 14px;
     padding: 5px;
+    background: transparent;
 }
 
 .search-bar button {
@@ -156,6 +158,11 @@ strong {
     border: none;
     cursor: pointer;
     font-size: 16px;
+}
+
+.search-bar button i{
+  color: black;
+  font-size: 20px;
 }
 
 .login-btn {
@@ -211,7 +218,7 @@ strong {
   color: #e85470;
 }
 
-.content h1 {
+.content h1{
   font-size: 50px;
   font-weight: bold;
   margin: 10px 0;
@@ -287,7 +294,7 @@ strong {
   color: #e85470;
   }
   
-.about-text h1 {
+.about-text h1{
     font-size: 36px;
     font-weight: bold;
     color: #333;
@@ -295,12 +302,21 @@ strong {
     text-align: center;
 }
 
+.about-text h2{
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 .about-text p {
-    font-size: 12px;
+    font-size: 15px;
     color: #555;
     line-height: 1.5;
     margin-bottom: 15px;
     max-width: 600px;
+    text-align: justify;
 }
 
 
@@ -346,6 +362,17 @@ strong {
             border-radius: 5px;
             object-fit: cover;
         }
+        
+        .reactions {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #444; /* Adjust color */
+}
+.reactions i {
+    margin: 5px;
+}
         
        .caption {
          margin-top: 10px;
