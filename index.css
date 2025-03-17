@@ -301,7 +301,6 @@ strong {
     line-height: 1.5;
     margin-bottom: 15px;
     max-width: 600px;
-    overflow: scroll;
 }
 
 
@@ -452,7 +451,6 @@ form input, form textarea, form button {
   border: none;
   border-radius: 5px;
   font-size: 1rem;
-  overflow: scroll;
 }
 
 form input, form textarea {
