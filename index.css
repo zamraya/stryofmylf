@@ -425,7 +425,28 @@ strong {
      color: #e85470;
    }
    
+.back-photo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    justify-content: center;
+  }
 
+  .polaroid:hover .front-photo {
+    opacity: 0;
+  }
+
+  .polaroid:hover .back-photo {
+    opacity: 1;
+  }
+  
+  .polaroid.show-caption .caption,
+  .polaroid.show-caption .back-caption {
+    display: block;
+  }
    
    
 /*contact*/
