@@ -325,7 +325,7 @@ strong {
   .explore {
     background: linear-gradient(120deg, #FAE8ED, #FDD5DF, #FFE6EE, #FFA2B9);
     font-family: 'Courier New', monospace;
-    height: 150vh;
+    height: 180vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -598,7 +598,7 @@ form button:hover {
     }
     
     .hamburger {
-        display: block; /* Show only on small screens */
+        display: block; 
     }
     
     .dropdown-menu {
@@ -607,7 +607,6 @@ form button:hover {
         padding: 5px;
     }
 
-    /* Search Bar & Log In Button */
 .search-bar {
     display: flex;
     align-items: center;
@@ -626,13 +625,4 @@ form button:hover {
   border: 1px solid black;
   text-decoration: none;
 }
-}
-
-/* Explore Section Adjustments */
-@media (max-width: 768px) {
-    #explore {
-        width: 100%;
-        margin: auto;
-        font-size: 14px;
-    }
 }
