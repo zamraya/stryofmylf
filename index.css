@@ -572,21 +572,7 @@ form button:hover {
     align-items: center;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
 
-nav ul li {
-    position: relative;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    padding: 8px 15px;
-}
 
 .hamburger {
     display: none;
@@ -624,16 +610,24 @@ nav ul li a {
     }
 
     /* Search Bar & Log In Button */
-    .search-bar {
-        width: 100%;
-        margin-top: 10px;
-    }
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 200px;
+    background: transparent;
+}
 
-    .login-btn {
-        display: block;
-        text-align: center;
-        margin-top: 10px;
-    }
+.login-btn {
+  background: white;
+  color: black;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid black;
+  text-decoration: none;
+}
 }
 
 /* Explore Section Adjustments */
