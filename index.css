@@ -349,10 +349,11 @@ strong {
             padding: 10px;
             box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
             text-align: center;
-            transition: transform 0.5s;
+            transition: transform 0.5s ease;
             transform-style: preserve-3d;
             position: relative;
             cursor: pointer;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             border-image: url('/images/border') 30 round;
         }
 
@@ -370,10 +371,11 @@ strong {
     font-size: 20px;
     color: #444; 
 }
+
 .reactions i {
     margin: 5px;
 }
-        
+
        .caption {
          margin-top: 10px;
   font-size: 16px;
