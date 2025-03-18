@@ -332,61 +332,106 @@ strong {
   align-items: center;
   }
   
-        .collage {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            max-width: 900px;
-            margin: auto;
-            perspective: 1000px; 
-            justify-content: center;
-        }
+.collage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px; /* Space between rows */
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+}
 
-        .polaroid {
-            width: 200px;
-            height: 270px;
-            background: white;
-            padding: 10px;
-            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            transition: transform 0.5s ease;
-            transform-style: preserve-3d;
-            position: relative;
-            cursor: pointer;
-            border-image: url('/images/border') 30 round;
-        }
+/* Each row (rope) */
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between polaroids */
+    position: relative;
+    width: 100%;
+}
 
-        .polaroid img {
-            width: 180px; 
-            height: 180px; 
-            border-radius: 5px;
-            object-fit: cover;
-            margin-top: 10px;
-        }
-        
-        .reactions {
+/* Hanging string */
+.row::before {
+    content: "";
+    width: 90%;
+    height: 2px;
+    background: black; 
+    position: absolute;
+    top: -10px;
+    left: 5%;
+}
+
+/* Polaroid styling */
+.polaroid {
+    width: 200px;
+    height: 270px;
+    background: white;
+    padding: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+    cursor: pointer;
+    transform: rotate(var(--rotation));
+    transition: transform 0.3s ease;
+}
+
+/* Randomized rotation */
+.polaroid:nth-child(1) { --rotation: -7deg; }
+.polaroid:nth-child(2) { --rotation: 5deg; }
+.polaroid:nth-child(3) { --rotation: -3deg; }
+.polaroid:nth-child(4) { --rotation: 8deg; }
+
+/* Clothespin (clip) */
+.polaroid::before {
+    content: " ";
+    background: url('/images/clip') no-repeat center/contain;
+    width: 50px;
+    height: 70px;
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Rope hanging */
+.polaroid::after {
+    content: "";
+    width: 2px;
+    height: 25px;
+    position: relative;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Image inside polaroid */
+.polaroid img {
+    width: 180px;
+    height: 180px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+
+/* Reaction icons */
+.reactions, .post-reactions {
     position: absolute;
     bottom: 10px;
+    font-size: 20px;
+    color: #444;
+}
+
+.reactions {
     right: 10px;
-    font-size: 20px;
-    color: #444; 
 }
 
-  .post-reactions {
-    position: absolute;
-    bottom: 10px;
+.post-reactions {
     left: 10px;
-    font-size: 20px;
-    color: #444; 
 }
 
-.reactions i {
-    margin: 5px;
-}
-
-.post-reactions i {
-    margin: 5px;
-}
 
        .caption {
          margin-top: 10px;
@@ -400,7 +445,7 @@ strong {
   border-image: url(/images/border) 30 round;
 }
 
-        .polaroid .back-caption {
+         .back-caption {
             position: absolute;
             top: 0;
             left: 0;
@@ -442,7 +487,7 @@ strong {
 .back-photo {
     position: absolute;
     top: 10px;
-    left: 20px;
+    left: 10px;
     width: 100%;
     height: auto;
     opacity: 0;
