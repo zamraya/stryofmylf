@@ -567,25 +567,25 @@ form button:hover {
     background: black;
   }
 
-
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-  .container {
-    width: 90%;
-  }
+.nav-links {
+    display: flex;
+    align-items: center;
 }
 
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
 
-@media screen and (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-  .container {
-    width: 100%;
-    padding: 10px;
-  }
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
 }
 
 .hamburger {
@@ -604,8 +604,9 @@ form button:hover {
         top: 60px;
         right: 0;
         background-color: #222;
-        width: 200px;
+        width: 220px;
         padding: 15px;
+        border-radius: 5px;
     }
     
     .nav-links.active {
@@ -614,6 +615,24 @@ form button:hover {
     
     .hamburger {
         display: block; /* Show only on small screens */
+    }
+    
+    .dropdown-menu {
+        position: relative;
+        background-color: #333;
+        padding: 5px;
+    }
+
+    /* Search Bar & Log In Button */
+    .search-bar {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .login-btn {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
     }
 }
 
