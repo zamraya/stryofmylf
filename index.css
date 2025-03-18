@@ -344,7 +344,7 @@ strong {
 
         .polaroid {
             width: 200px;
-            height: 250px;
+            height: 270px;
             background: white;
             padding: 10px;
             box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
@@ -353,7 +353,6 @@ strong {
             transform-style: preserve-3d;
             position: relative;
             cursor: pointer;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             border-image: url('/images/border') 30 round;
         }
 
@@ -362,6 +361,7 @@ strong {
             height: 180px; 
             border-radius: 5px;
             object-fit: cover;
+            margin-top: 10px;
         }
         
         .reactions {
@@ -372,7 +372,19 @@ strong {
     color: #444; 
 }
 
+  .post-reactions {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: #444; 
+}
+
 .reactions i {
+    margin: 5px;
+}
+
+.post-reactions i {
     margin: 5px;
 }
 
@@ -574,4 +586,42 @@ form button:hover {
     width: 100%;
     padding: 10px;
   }
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+/* Mobile View: Hide Nav Links and Show Hamburger */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #222;
+        width: 200px;
+        padding: 15px;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .hamburger {
+        display: block; /* Show only on small screens */
+    }
+}
+
+/* Explore Section Adjustments */
+@media (max-width: 768px) {
+    #explore {
+        width: 90%;
+        margin: auto;
+        font-size: 14px;
+    }
 }
