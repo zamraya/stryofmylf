@@ -572,13 +572,11 @@ form button:hover {
     align-items: center;
 }
 
-
-
 .hamburger {
     display: none;
     cursor: pointer;
     font-size: 24px;
-    color: white;
+    color: black;
 }
 
 /* Mobile View: Hide Nav Links and Show Hamburger */
@@ -633,7 +631,7 @@ form button:hover {
 /* Explore Section Adjustments */
 @media (max-width: 768px) {
     #explore {
-        width: 90%;
+        width: 100%;
         margin: auto;
         font-size: 14px;
     }
