@@ -254,7 +254,7 @@ strong {
 }
 
 .about {
-  background: linear-gradient(120deg, #FAE8ED, #FDD5DF, #FFE6EE, #FFA2B9);
+  background: linear-gradient(120deg, #FFA2B9, #FAE8ED, #FDD5DF, #FFE6EE, #FFA2B9);
 }
 
 .about-content-container {
@@ -323,7 +323,7 @@ strong {
 
 /*explore*/
   .explore {
-    background: linear-gradient(120deg, #FAE8ED, #FDD5DF, #FFE6EE, #FFA2B9);
+    background: linear-gradient(120deg, #FFA2B9, #FAE8ED, #FDD5DF, #FFE6EE, #FFA2B9);
     font-family: 'Courier New', monospace;
     height: 180vh;
   display: flex;
