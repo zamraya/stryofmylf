@@ -351,11 +351,11 @@ strong {
 .row::before {
     content: "";
     width: 90%;
-    height: 2px;
     background: black; 
     position: absolute;
     top: -10px;
     left: 5%;
+    height: 4px;
 }
 
 /* Polaroid styling */
@@ -459,6 +459,7 @@ strong {
             opacity: 0;
             backface-visibility: hidden;
             transition: opacity 0.5s ease;
+
         }
 
         .polaroid:hover {
