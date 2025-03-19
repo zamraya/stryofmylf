@@ -356,7 +356,14 @@ strong {
     top: -10px;
     left: 5%;
     height: 4px;
-}
+    animation: sway 3s ease-in-out infinite;
+        }
+
+  @keyframes sway {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(3px); }
+        }
+
 
 /* Polaroid styling */
 .polaroid {
