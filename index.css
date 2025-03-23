@@ -440,7 +440,7 @@ strong {
   white-space: nowrap;
   width: 200px;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: clip;
   border-image: url(/images/border) 30 round;
 }
 
